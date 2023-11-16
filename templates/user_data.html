@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User Messages</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <table class="table">
+            <tr class="table__header">
+                <th class="table__cell">ID</th>
+                <th class="table__cell">User Name</th>
+                <th class="table__cell">User Contact</th>
+                <th class="table_cell">Product Name</th>
+                <th class="table__cell">Quantity</th>
+                <th class="table__cell">Price</th>
+                <th class="table__cell">Payment Method</th>
+                <th class="table__cell">Date</th>
+            </tr>
+            {% for new in data %}
+            <tr class="table__row">
+                {% for main in new %}
+                   <td class="table__cell">{{ main }}</td>
+                {% endfor %}
+            </tr>
+
+            {% endfor %}
+
+        </table>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

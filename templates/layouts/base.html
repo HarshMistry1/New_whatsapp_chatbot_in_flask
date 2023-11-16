@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Saubhagyam - {% block title %}{% endblock %}
+    </title>
+    <script>
+            $(document).ready(function () {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    
+       function getOption() {
+          selectElement = document.querySelector('#option');
+          output = selectElement.value;
+          document.querySelector('.output').textContent = output;
+        }
+
+    </script>
+    <style>
+        body {
+        background-color: #3745c2;
+        margin: 200px 40%;
+      }
+
+      form[name='searchbar'] {
+        background-color: #FFFFFF;
+        width: 260px;
+        height: 41px;
+        border: 1px solid #808080;
+        display:flex;
+        border-radius:9px;
+        border-color:#808080;
+        flex-direction:row;
+        align-items:center;
+      }
+
+      input[name='search'] {
+        all: unset;
+        font: 16px system-ui;
+        color: #808080;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      input[name='user_messa_search'] {
+        all: unset;
+        font: 16px system-ui;
+        color: #808080;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      input[name='order_search'] {
+        all: unset;
+        font: 16px system-ui;
+        color: #808080;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      input[name='message_search'] {
+        all: unset;
+        font: 16px system-ui;
+        color: #808080;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: #808080;
+        opacity: 0.7;
+      }
+
+      svg {
+        color: #808080;
+        fill: currentColor;
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+      }
+
+      button[name='search_type'] {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+
+      button[name='search_value'] {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+      #user_message{
+        display: none;
+        height: 101px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      #user_message p{
+        margin: 0;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+      }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description"
+          content="Free Datta Able Admin Template come up with latest Bootstrap 4 framework with basic components, form elements and lots of pre-made layout options"/>
+    <meta name="keywords"
+          content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
+    <meta name="author" content="CodedThemes"/>
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="/static/assets/images/saubhagyam_logo.png" type="image/png">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome/css/fontawesome.css">
+    
+    <link rel="stylesheet" href="/static/assets/plugins/web_page_style/css/web_page_style.css">
+    
+    <!-- vendor css -->
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Specific CSS goes HERE -->
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+<body>
+
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+
+    {% include 'includes/sidebar.html' %}
+
+    {% include 'includes/navigation.html' %}
+
+
+    {% block content %}{% endblock content %}
+
+    {% include 'includes/scripts.html' %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>

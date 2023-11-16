@@ -1,0 +1,939 @@
+{
+	"intents": [{
+			"tag": "order_status",
+			"patterns": [
+				"When will i recieved my order?",
+				"what is my delivery status?",
+				"tell me the delivery status",
+				"let me know the delivery status",
+				"Please, tell me the delivery status",
+				"When Will My Order Get Dispatch?",
+				"dispatch of my orders",
+				"dispatch status of my orders",
+				"status of dispatched orders",
+				"How Much Time It Will Take to Deliver My Order?",
+				"How long it will take to deliver my orders?",
+				"How long time it will take to deliver my orders?",
+				"How long will i recieve my orders?",
+				"Please tell me, when will i recieve my orders?",
+				"tell me, when will i recieve my orders",
+				"my order status",
+				"order status",
+				"when will i recieve my orders at home",
+				"when will i get my orders placed?"
+			],
+			"responses": [
+				"Your order will be placed within this time.",
+				"Your order will be placed soon.",
+				"Your order will be come on this time."
+			]
+		},
+		{
+			"tag": "greeting",
+			"patterns": [
+				"Hi",
+				"Hey",
+				"Is anyone there?",
+				"Hello",
+				"Hay",
+				"Hello there."
+			],
+			"responses": [
+				"Hello, this is chatbot here. how can i help you?",
+				"Hi, your chatbot at your service. how can i help you?",
+				"Hi there, my name is chatbot. how can i help you?"
+			]
+		},
+		{
+			"tag": "stock query",
+			"patterns": [
+				"When Will Product Get in Stock?",
+				"When will product will come in stock?",
+				"How long it will take to product get in stock?",
+				"tell me the time to get product in stock",
+				"when will your stock get products?",
+				"when we will see products in stock?",
+				"when your products will be in stock?",
+				"when all products will be in stock?"
+			],
+			"responses": [
+				"You can see the products in stock within 3 days.",
+				"The products will be come in stock in 3 days.",
+				"The products are always get in stock in 3 days."
+			]
+		},
+		{
+			"tag": "cod_order_confirmation",
+			"patterns": [
+				"When Will My Cod Order Get Confirmed?",
+				"when my cod order will get confirmed?",
+				"when my cod order will confirmed?",
+				"when cod order will be confirmed?",
+				"cod order confirmation",
+				"tell me, the status of order of cod",
+				"please, let me know the cod order status",
+				"what is my cod order status?",
+				"what is the status of my cod?",
+				"what is the status of my cod order?"
+			],
+			"responses": [
+				"Your order will get confirm within 3 hours.",
+				"Orders of cod gets confirm within 3 hours.",
+				"It takes 3 hours to confirm cod orders."
+			]
+		},
+		{
+			"tag": "return_facility",
+			"patterns": [
+				"Is There Any Return Facility Available?",
+				"is there any return facility available?",
+				"do you have return facility available?",
+				"return facility",
+				"Is There Any Return Policy Available?",
+				"is there any return policy available?",
+				"please, tell me about return faclity",
+				"please, tell me about return policy",
+				"do you provide any return facility?",
+				"do you provide any return policy?",
+				"do you have any return policy?",
+				"tell me, about any return facility",
+				"tell me, about any return policy",
+				"any return policy",
+				"any return facility"
+			],
+			"responses": [
+				"Yes, we do have return facility and you can return it within 9 days.",
+				"Yes, we have return policy avaliable and return it within 9 days.",
+				"The return facility is avalible and you can return it within 9 days.",
+				"Absolutely, you can return items within 9 days."
+			]
+		},
+		{
+			"tag": "product_damage_query",
+			"patterns": [
+				"What If Product Get Damaged In-Transits or Received Damaged?",
+				"what if product gets damaged in-transits or received damaged?",
+				"if products gets damaged while transporation?",
+				"product is damaged in transportation",
+				"my order has been damaged in delivery",
+				"products recieved damaged in delivery",
+				"damaged product",
+				"order is broken in delivery",
+				"orders got damaged in delivery",
+				"if products gets damaged while delivery?",
+				"my order is damaged in transportation",
+				"my orders are damaged in transportation",
+				"my orders has been damaged in transportation",
+				"recieved damaged product",
+				"product is broken",
+				"products are broken",
+				"products are damaged"
+			],
+			"responses": [
+				"Please, return it to the given importer address within 9 days.",
+				"You can return it to the importer address within 9 days."
+			]
+		},
+		{
+			"tag": "order_cancellation",
+			"patterns": [
+				"What Is the Process of Cancellation of Order?",
+				"what is the process of cancellation of order?",
+				"how to cancel order the orders?",
+				"how to cancel all orders?",
+				"how to cancel my orders?",
+				"process of order cancellation",
+				"cancel my orders",
+				"order cancellation",
+				"cancel orders",
+				"how to stop my orders?",
+				"how to cancel delivery of orders?",
+				"how to stop my delivery orders",
+				"how to cancel my delivery orders?"
+			],
+			"responses": [
+				"You can cancel your orders by visiting to our website and in your profile you can cancel orders.",
+				"If you want to cancel your orders, go to our website and in your profile cancel the orders.",
+				"First, visit our website and go to your profile and cancel your orders from there."
+			]
+		},
+		{
+			"tag": "cost_of_ghee",
+			"patterns": [
+				"Why Your Ghee Is Costlier Than Any Other Brand's Ghee?",
+				"why your ghee is costlier than any other brand's ghee?",
+				"your ghee is expensive than the other ghee brand",
+				"your ghee is costlier comparing to the other brands",
+				"your ghee is more costlier by the other brands in market",
+				"your ghee is very costly",
+				"your ghee is very expensive"
+			],
+			"responses": [
+				"Because, we offer you the best quality and purity ghee than any other offers you.",
+				"The reason for having costly is we are providing the finest ghee than the other brands.",
+				"It is expensive because, we provide you the best ghee quality as possible."
+			]
+		},
+		{
+			"tag": "organic_products_query",
+			"patterns": [
+				"Are Your All Products Organic?",
+				"are your all products organic?",
+				"is your product organic?",
+				"tell me, is your product organic?",
+				"please, tell me is your product organic?",
+				"please, tell me are your products are organic?",
+				"are all of your products organic?",
+				"are your products organic?"
+			],
+			"responses": [
+				"Yes, our all products are organic.",
+				"For sure, our evry single products are organic.",
+				"Yes, All products are organic."
+			]
+		},
+		{
+			"tag": "certified_product_query",
+			"patterns": [
+				"Are You Certified Organic Company?",
+				"are you certified organic company?",
+				"is your product certified?",
+				"are your products certified?",
+				"is your company certified?",
+				"tell me, is your company certified?"
+			],
+			"responses": [
+				"Yes, our company is certified.",
+				"Yes, our all products are certified."
+			]
+		},
+		{
+			"tag": "gir_gau_based_query",
+			"patterns": [
+				"All GIR Products Are Gau Based?",
+				"all gir products are gau based?",
+				"are your all gir products gau based?",
+				"all gir products gau based",
+				"gau based gir products"
+			],
+			"responses": [
+				"Yes, our all gir products are gau based.",
+				"Absolutely, our all gir products are gau based."
+			]
+		},
+		{
+			"tag": "new_products_than_others_query",
+			"patterns": [
+				"How's Products Different Than Market Products?",
+				"how's products different than market products?",
+				"how is your products are different than the others?"
+			],
+			"responses": [
+				"Because, our products offers the highest quality than the other organic brands.",
+				"Yes, these are different and the reason is we offer you our best quality organic products than anyone."
+			]
+		},
+		{
+			"tag": "type_of_product_query",
+			"patterns": [
+				"Which Type of Products Do You Have?",
+				"which type of products do you have?",
+				"how many types of products do you have?",
+				"how many types of products you have?",
+				"please, tell me all type of products",
+				"all type of products"
+			],
+			"responses": [
+				"We have several products out there in our website.",
+				"In organic we have many types of products in our website."
+			]
+		},
+		{
+			"tag": "website_products_query",
+			"patterns": [
+				"All The Products Shown in Website Is Yours?",
+				"all the products shown in website is yours?",
+				"are all these products shown in your website is owned by you?",
+				"are all of these products in your website is yours?",
+				"is this your product?",
+				"are these all your products?"
+			],
+			"responses": [
+				"Yes, all of the products at website are ours.",
+				"Absolutetly, the products are shown at website are from us."
+			]
+		},
+		{
+			"tag": "delivery_charges_query",
+			"patterns": [
+				"What Are Delivery Charges?",
+				"what are delivery charges?",
+				"how much of your order delivery charges?",
+				"what are the delivery charges of your orders?",
+				"delivery charges",
+				"order delivery charges",
+				"please, tell me the delivery charges",
+				"let me know the delivery charges",
+				"all delivery charges"
+			],
+			"responses": [
+				"The delivery charges for orders are 69 rupees.",
+				"The charges of order delivery are 69 rupees."
+			]
+		},
+		{
+			"tag": "fast_delivery_query",
+			"patterns": [
+				"Is There Any Fast Delivery Facility Available?",
+				"is there any fast delivery facility available?",
+				"do you have any fast delivery facility?",
+				"do you offer fast delivery option?",
+				"any fast delivery option",
+				"any fast delivery facility"
+			],
+			"responses": [
+				"Yes, we do have an option of fast delivery for every product at 159 rupees.",
+				"Fast delivery option is avaliable at 159 rupees.",
+				"The Fast delivery option is avaliable in 159 rupees."
+			]
+		},
+		{
+			"tag": "discount_or_coupon_query",
+			"patterns": [
+				"Is There Any Discount or Coupon on Some Amount?",
+				"is there any discount or coupon on some amount?",
+				"do you have any discount or coupon on some amount?",
+				"do you offer any coupon or any discount on any amount?",
+				"do you have any coupon or any discount on any amount?",
+				"any discount or coupon on any amount",
+				"any discount"
+			],
+			"responses": [
+				"For now we do have 15% discount on every product.",
+				"We do have 15% discount on every product for now."
+			]
+		},
+		{
+			"tag": "satisfied",
+			"patterns": [
+				"it was really nice to talk with you",
+				"very good",
+				"it was good to talk with you",
+				"looking forward to it",
+				"you are great",
+				"nice to talk with you",
+				"i really had a great time with you",
+				"that is great",
+				"great, i will look forward to it",
+				"i will look forward to it",
+				"yes, i will look forward to it.",
+				"good to talk with you",
+				"you are really very good",
+				"i really like to chat with you",
+				"i really like the way you talk",
+				"great time with you",
+				"happy to talk with you",
+				"it was a great time with you",
+				"you have very nice services",
+				"very good services",
+				"very positive response",
+				"you have really nice services",
+				"you have really good services",
+				"nice work",
+				"thank you for making it easy",
+				"thank you for made it easy",
+				"you have made it easy",
+				"good work",
+				"liked the services",
+				"nice one",
+				"good",
+				"nice services",
+				"good services",
+				"very good",
+				"great",
+				"that was great",
+				"happy with your services",
+				"that is good",
+				"that was good one",
+				"you have really best services"
+
+			],
+			"responses": [
+				"Thank you",
+				"I had great time with you too.",
+				"I am Happy that you liked it.",
+				"I am happy, that you had a great time wit me",
+				"Good to hear from you",
+				"Happy to hear that.",
+				"Happy to hear from you that you liked our service.",
+				"I am happy for it.",
+				"Thank you very much and will keep it simple for you always."
+			]
+		},
+		{
+			"tag": "formality_res",
+			"patterns": [
+				"i am fine also.",
+				"i am good",
+				"fine",
+				"all fine",
+				"all good",
+				"as fine as you",
+				"i am fine",
+				"i am fine too"
+			],
+			"responses": [
+				"That is good, to hear from you. Tell me how can i help you?",
+				"Great, to hear this. Just let me know how can i help you?",
+				"That sounds great. How can i help you?"
+			]
+		},
+		{
+			"tag": "goodbye",
+			"patterns": [
+				"bye",
+				"see you soon",
+				"goodbye"
+			],
+			"responses": [
+				"See you soon",
+				"Have a nice day",
+				"Bye! Come back again",
+				"See you soon."
+			]
+		},
+		{
+			"tag": "thanks",
+			"patterns": [
+				"Thanks",
+				"Thank you",
+				"thank you for your time",
+				"Thank you very much",
+				"That's helpful",
+				"Thanks for the help"
+			],
+			"responses": [
+				"It was happy to help!",
+				"Any time!",
+				"My pleasure",
+				"You're most welcome!"
+			]
+		},
+		{
+			"tag": "about",
+			"patterns": [
+				"Who are you?",
+				"What are you?",
+				"Who you are?"
+			],
+			"responses": [
+				"I am chatbot.",
+				"I am your bot assistant",
+				"I am an Artificial Intelligent bot"
+			]
+		},
+		{
+			"tag": "name",
+			"patterns": [
+				"what is your name",
+				"what should I call you",
+				"whats your name?"
+			],
+			"responses": [
+				"You can call me chatbot.",
+				"Just call me as chatbot"
+			]
+		},
+		{
+			"tag": "help",
+			"patterns": [
+				"could you help me?",
+				"give me a hand please",
+				"can you help?",
+				"what can you do for me?",
+				"i need a support",
+				"i need a help",
+				"support me please"
+			],
+			"responses": [
+				"Tell me how can assist you",
+				"Tell me your problem to assist you",
+				"Yes Sure, How can I support you"
+			]
+		},
+		{
+			"tag": "createaccount",
+			"patterns": [
+				"4",
+				"looking to create an account",
+				"i am looking to create my account",
+				"yes, i want to create a new account",
+				"i want to sign up for my new account",
+				"how to sign up for new account",
+				"i want to create a new one",
+				"create a new account",
+				"sign up a new account",
+				"sign up my account",
+				"looking to create a new account",
+				"I need to create a new account",
+				"how to create an account",
+				"create an account",
+				"how to open a new account",
+				"I want to create an account",
+				"can you create an account for me",
+				"how to open a new account"
+			],
+			"responses": [
+				"You can just easily create a new account from our web site",
+				"Just go to our web site and follow the guidelines to create a new account"
+			]
+		},
+		{
+			"tag": "complaint",
+			"patterns": [
+				"12",
+				"have a complaint",
+				"complaint",
+				"register a complaint",
+				"I want to raise a complaint",
+				"there is a complaint about a service"
+			],
+			"responses": [
+				"Please provide us your complaint in order to assist you",
+				"Please mention your complaint, we will reach you and sorry for any inconvenience caused"
+			]
+		},
+		{
+			"tag": "transactions",
+			"patterns": [
+				"3",
+				"how much account balanance do i have?",
+				"account balance",
+				"my account transactions",
+				"account transactions",
+				"what are my all transactions",
+				"all account transactions",
+				"information of account balance",
+				"how can i check my account balance?",
+				"what is my account balance?",
+				"how much account balance do i have?",
+				"how much money is remaining in my account?"
+			],
+			"responses": [
+				"Your main account balance is. However, you can checkout your all transactions from this link.",
+				"The main balance is. You can chech your all transactions by this link."
+			]
+		},
+		{
+			"tag": "subscriptions",
+			"patterns": [
+				"6",
+				"what is the rate of subscriptions?",
+				"subscriptions",
+				"plans of subscriptions",
+				"subscriptions plans",
+				"what is the duration of subscription?",
+				"what is the price of subscription?",
+				"price of subscription",
+				"how long is the subscription?",
+				"how much for subscription?",
+				"how long the subscription will be?"
+			],
+			"responses": [
+				"The subscription plan will be Rs.10,000 and it, will be 9 months of duration for subscription.",
+				"Your subscription amount will be Rs.10,000 with having duration 9 months.",
+				"You will get 9 months of subscriptions worth Rs.10,000."
+
+			]
+		},
+		{
+			"tag": "tandc",
+			"patterns": [
+				"11",
+				"what are the terms and conditions of company?",
+				"tnc",
+				"tandc",
+				"terms and conditions",
+				"what are the likely terms and conditions are?",
+				"can you tell me the terms and conditions?",
+				"can you please tell me what are the terms and conditions?",
+				"can you please tell me the terms and conditions?",
+				"please tell me the terms and conditions?",
+				"all terms and conditions"
+			],
+			"responses": [
+				"Sure, you will get all the terms and conditions from this link.",
+				"All the terms and conditions can be found from our website.",
+				"You can found the terms and conditions from our website."
+
+			]
+		},
+		{
+			"tag": "businesses",
+			"patterns": [
+				"7",
+				"businesses",
+				"What kind of business you have?",
+				"What sort of business you have?",
+				"tell me more businesses",
+				"how long you are in this business",
+				"tell us about your business",
+				"tell us everything about business",
+				"tell me everything about your business",
+				"tell me about the businesses",
+				"can you please tell me, in how much shops you have your businesses?",
+				"please tell me, in how much shops you have your businesses?",
+				"what kind of businesses you have with shops?"
+			],
+			"responses": [
+				"We have a larger businesses with shops, more than 10 years.",
+				"The company has mostly 10 years of enormous business with shops."
+			]
+		},
+		{
+			"tag": "appointment",
+			"patterns": [
+				"5",
+				"appointments",
+				"office appointments",
+				"what are the time slots of appointments?",
+				"what are the specific time slots of appointments?", "status of my order",
+				"can you please tell what are the appointment timings?",
+				"can you tell me the timing of appointments",
+				"appointment timings",
+				"do you have any specific appointment timings?",
+				"time slots for appointments",
+				"appointment time slots"
+
+			],
+			"responses": [
+				"Yes, all the timings for appointments are held between 2 P.M. to 5 P.M. at office timing.",
+				"The timings of all appointments are kept between 2 P.M. to 5 P.M."
+			]
+		},
+		{
+			"tag": "another_appointments",
+			"patterns": [
+				"do you have any other time slots of appointments?",
+				"another time of appointments",
+				"can we have an another appointment?",
+				"can we have an another appointment timing?",
+				"tell me another time of appointment",
+				"tell me another time slot for appointment",
+				"another time slots for appointments"
+
+			],
+			"responses": [
+				"Sure, you can get an appointment as per your need. Please, contact the following number for your appointment.",
+				"Yes, the appointment timings can be change and you can schedule your appointments as per your need, all you have to do is contact on this number for your desired appointment timing."
+			]
+		},
+		{
+			"tag": "faq",
+			"patterns": [
+				"8",
+				"can i see the faq?",
+				"faq",
+				"all faq"
+
+			],
+			"responses": [
+				"The faq can be found from here.",
+				"You can see the faq by clicking on this link."
+			]
+		},
+		{
+			"tag": "products",
+			"patterns": [
+				"looking for products",
+				"1",
+				"i am looking for products",
+				"show me all the products",
+				"what kind of products do you have",
+				"what are all the products look like",
+				"what are the products you have?",
+				"let me see all the products",
+				"tell me about products",
+				"can you tell me about the products",
+				"product related queries",
+				"can i have a list of products",
+				"where can i see all the products",
+				"all products",
+				"how much categories do you have for products?",
+				"can you show me all the products?",
+				"can you list me all the products?",
+				"list all the products",
+				"company products",
+				"show me all products",
+				"products"
+
+			],
+			"responses": [
+				"You can see all the products from here with all product categories.",
+				"All the products you can see with this link yet you can see different categories."
+			]
+		},
+		{
+			"tag": "min_amount",
+			"patterns": [
+				"what is the minimum price of your product?",
+				"minimum price of a product",
+				"how much products do you have with minimum price?",
+				"products minimum price"
+
+			],
+			"responses": [
+				"Here is the list of all products with minimum price.",
+				"You can get these products at minimum price, maximum charges may apply according to place."
+			]
+		},
+		{
+			"tag": "out_of_file",
+			"patterns": [
+				"abc",
+				"a",
+				"ab",
+				"b",
+				",",
+				"(",
+				"()",
+				")",
+				"e",
+				"f",
+				"g",
+				"h",
+				"new",
+				"delete",
+				"my",
+				"front"
+
+			],
+			"responses": [
+				"Please, type the appropriate words to get right results.",
+				"Please, type the right words to recieve you right results."
+			]
+		},
+		{
+			"tag": "general_ques",
+			"patterns": [
+				"i have a query",
+				"query",
+				"i have requirements",
+				"requirements"
+
+			],
+			"responses": [
+				"Please, provide us your query to find you the right one.",
+				"Let me know your requirements, to get you the best one.",
+				"You can let me know what kind of query you have."
+			]
+		},
+		{
+			"tag": "customer_ser",
+			"patterns": [
+				"10",
+				"can i have a customer helpline",
+				"customer helpline",
+				"customer care",
+				"show me the customer care number",
+				"customer care number",
+				"customer care contact",
+				"please, tell the number of customer care",
+				"tell me the contact number of customer care",
+				"what is the customer care number",
+				"can you tell me the customer care number",
+				"contact customer care",
+				"customer service"
+			],
+			"responses": [
+				"The customer care number can be found from here.",
+				"Our customer care helpline number can be found from here",
+				"The contact of customer care can be found from here."
+			]
+		},
+		{
+			"tag": "prices",
+			"patterns": [
+				"9",
+				"how much prices do you have for products",
+				"prices of products",
+				"find me the best prices",
+				"pricelist",
+				"prices",
+				"what are the prices you have for products",
+				"please, provide me the prices of products",
+				"all prices",
+				"products prices"
+			],
+			"responses": [
+				"The prices can be found from here for all products.",
+				"You can see all the prices can be found from here.",
+				"All the prices are availabe for all products at this page."
+			]
+		},
+		{
+			"tag": "account_information",
+			"patterns": [
+				"how can i see my account?",
+				"my account",
+				"account information",
+				"13",
+				"where is my account details",
+				"can you please tell me my account information",
+				"can you tell me the account details",
+				"where can i get my all account details",
+				"how can i get my account details",
+				"all my account information"
+			],
+			"responses": [
+				"Your account information can be found from here.",
+				"The account information for your profile is here."
+			]
+		},
+		{
+			"tag": "sorry_intent",
+			"patterns": [
+				"i am sorry",
+				"sorry",
+				"i am really very sorry",
+				"sorry for everyting"
+			],
+			"responses": [
+				"No problem, it happens.",
+				"That is fine, it happens."
+			]
+		},
+		{
+			"tag": "general_queries_for_profile",
+			"patterns": [
+				"i am looking for my profile",
+				"my profile",
+				"i am looking for account",
+				"i am looking for accounts",
+				"where can i see about my profile",
+				"looking for my profile",
+				"looking for profile",
+				"my user profile",
+				"my user account",
+				"how to see my profile",
+				"how to check my profile"
+
+			],
+			"responses": [
+				"Are you looking to log in or you want to create new one?",
+				"Are you finding to sign in to your profile or you want create a new profile?",
+				"Are you talking about log in to your profile or create an account?",
+				"Do you want to log in your account or you want create a new account?"
+
+			]
+		},
+		{
+			"tag": "del_profile",
+			"patterns": [
+				"delete my account",
+				"delete my profile",
+				"how can i delete my profile",
+				"how to delete my profile",
+				"how to delete my acocunt",
+				"how can i delete my account",
+				"how to delete the acoount",
+				"delete an account",
+				"delete the account now",
+				"how to delete an account",
+				"delete my profile now",
+				"delete the profile now",
+				"how to delete the profile",
+				"16",
+				"i want to delete my account",
+				"looking to delete an account",
+				"delete account",
+				"delete user account",
+				"delete profile",
+				"how to delete my account",
+				"i really want to delete my account",
+				"i really want to delete my profile"
+			],
+			"responses": [
+				"You can delete your account by this link. You will get a confirmation link and your account will be delete at a time.",
+				"Delete your account by clicking on this link. Yo will have a confirmation link and the account will be deleted."
+			]
+		},
+		{
+			"tag": "log_in_profile",
+			"patterns": [
+				"i want to log in my profile",
+				"options to log in my profile",
+				"options to log in my account",
+				"yes, i want to log in",
+				"i want to log in",
+				"log in my profile",
+				"i am looking for log in page",
+				"looking for log in",
+				"log in my account",
+				"looking for log in",
+				"find me the log in page",
+				"14",
+				"sign in my account",
+				"sign in my profile",
+				"sign in account",
+				"sign in profile",
+				"how to log in my account",
+				"how to log in my profile"
+			],
+			"responses": [
+				"You can log in your account by clicking on this link.",
+				"Log in your account by clicking on this link.",
+				"By clicking on this link, you can log in to your account."
+			]
+		},
+		{
+			"tag": "reset_password",
+			"patterns": [
+				"i want to reset my password",
+				"where to reset the password",
+				"reset my password",
+				"reset the password",
+				"15",
+				"reset password",
+				"can you tell me how to reset my password",
+				"how to reset my profile password",
+				"how to reset my password",
+				"how to reset my account password",
+				"reset my account pass word",
+				"reset my profile password"
+			],
+			"responses": [
+				"You can reset your password by clicking on this link. You will get a user confirmation link and reset your password right there.",
+				"Reset your password by this link. You will have a confirmation link and you can change your password."
+			]
+		},
+		{
+			"tag": "change_profile",
+			"patterns": [
+				"i want to change my profile",
+				"i want to make changes in profile",
+				"edit my profile",
+				"i want to edit my profile",
+				"how can i edit my profile",
+				"show me how to edit my profile",
+				"how can i make changes in profile",
+				"want to make changes in my profile",
+				"want to edit the changes in my profile",
+				"can you edit the changes in my profile",
+				"let me make the changes in my profile",
+				"let me edit my profile",
+				"how to make changes in my profile?",
+				"how to edit my profile",
+				"edit the profile",
+				"make the changes in my profile",
+				"can you show me how to make the changes in my profile",
+				"can you show me how to edit my profile"
+			],
+			"responses": [
+				"Make the changes in your profile by clicking on this link",
+				"You can edit your profile from here.",
+				"Make the changes in your profile by this link."
+			]
+		}
+	]
+}

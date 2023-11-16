@@ -1,0 +1,128 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <section class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card daily-sales">
+                            <div class="card-block">
+                                <h4 class="mb-4">{{ user_name }}</h4>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-9">
+                                        <h5 class="f-w-300 d-flex align-items-center m-b-0">{{ user_contact }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ basic-table ] start -->
+                                <div class="col-xl-12">
+                                    <div class="card" style="padding-bottom: 20px;">
+                                        <div class="card-header">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <h5>Order Managemnet</h5> <br>
+                                                                <span>{{ all_page.info }}</span>
+                                                            </td>
+                                                            <td style="position: absolute; right: 15px;">
+                                                                <form id="form" name="searchbar">
+                                                                    <input type="search" id="query" name="order_search" placeholder="Search">
+                                                                    <button name="search_value" value="{{ user_contact }}">
+                                                                        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                                                                    </button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </div>
+                                        <div class="card-block table-border-style">
+                                            <div class="table-responsive" style="position: relative; top: 35px;">
+                                                <form>
+                                                    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Product Name</th>
+                                                                <th>Quantity</th>
+                                                                <th>Price</th>
+                                                                <th>Payment Method</th>
+                                                                <th>Date</th>
+                                                                <th>Order id</th>
+                                                                <th>Status</th>
+                                                                <th>Update Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        
+                    {% if my_data %}
+                                
+                                                        <tbody>
+                                                            {% for new in my_data %}
+                                                            <tr>
+                                                                <td>{{ new[3] }}</td>
+                                                                <td>{{ new[4] }}</td>
+                                                                <td>{{ new[5] }}</td>
+                                                                <td>{{ new[6] }}</td>
+                                                                <td>{{ new[7] }}</td>
+                                                                <td>{{ new[9] }}</td>
+                                                                
+                                                                {% if new[8] == "Delivered" %}
+                                                                   
+                                                                   <td>{{ new[8] }}</td>
+                                                                   <td><button class="btn btn-outline-success" disabled>Delivered</button></td>
+                                                                
+                                                                {% else %}
+                                                                
+                                                                   <td>{{ new[8] }}</td>
+                                                                   <td><button class="btn btn-success" name="delivered_status" value="{{ new[9] }}">Delivered</button></td>
+
+                                                                {% endif %}
+
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <nav style="margin-left: 25px;margin-top: 20px;">{{ all_page.links }}</nav>
+                                    </div>
+                                </div>
+                                <!-- [ basic-table ] end -->
+                            </div>
+                        {% else %}
+                          <h3 style="margin-left: 40%">No Data Found.</h3>
+                        {% endif %}
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -1,0 +1,171 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <section class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card daily-sales">
+                            <div class="card-block">
+                                <h4 class="mb-4">{{ user_name }}</h4>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-9">
+                                        <h5 class="f-w-300 d-flex align-items-center m-b-0">{{ user_contact }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ basic-table ] start -->
+                                <div class="col-xl-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <h5>User Orders</h5> <br>
+                                                                <span>User Orders</span>
+                                                            </td>        
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </div>
+                                        <div class="card-block table-border-style">
+                                            <div class="table-responsive">
+                                                <form>
+                                                    <table class="table table-hover" cellspacing="0" width="100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Product Name</th>
+                                                                <th>Quantity</th>
+                                                                <th>Price</th>
+                                                                <th>Payment Method</th>
+                                                                <th>Date</th>
+                                                                <th>Order id</th>
+                                                                <th>Status</th>
+                                                                <th>Update Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            {% if my_data == [] %}
+                                                            <tr>
+                                                                <td><h4 style="position: absolute; margin-left: 39% ">No Data Found.</h4></td>
+                                                            </tr>
+                                                            {% else %}
+                                                            {% for new in my_data %}
+                                                            
+                                                            <tr>
+                                                                <td>{{ new[3] }}</td>
+                                                                <td>{{ new[4] }}</td>
+                                                                <td>{{ new[5] }}</td>
+                                                                <td>{{ new[6] }}</td>
+                                                                <td>{{ new[7] }}</td>
+                                                                <td>{{ new[9] }}</td>
+                                                                
+                                                                {% if new[8] == "Delivered" %}
+                                                                
+                                                                <td>{{ new[8] }}</td>
+                                                                <td><button class="btn btn-outline-success" disabled>Delivered</button></td>
+                                                                
+                                                                {% else %}
+                                                                
+                                                                <td>{{ new[8] }}</td>
+                                                                <td><button class="btn btn-success" name="user_delivery_status" value="{{ new[9] }}">Delivered</button></td>
+                                                                
+                                                                {% endif %}
+                                                            </tr>
+                                                            {% endfor %} 
+                                                            {% endif %}
+                                                        </tbody>
+                                                    </table>
+                                                    {% if my_data != [] %}
+                                                    <button class="btn btn-outline-success" name="user_details" style="margin-left: 89%" value="{{ user_contact }}">View All</button>
+                                                    {% endif %}
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <h5>Message Data</h5> <br>
+                                                                <span>Message Data</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </div>
+                                        <div class="card-block table-border-style">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover" cellspacing="0" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>User Message</th>
+                                                            <th>Time of Message</th>
+                                                        </tr>
+                                                    </thead>
+                                    
+                                        {% if new_messa_data %}
+                                                    <tbody>
+                                                        {% for main in new_messa_data %}
+                                                        <tr>
+                                                            <td>{{ main[0] }}</td>
+                                                            <td>{{ main[1] }}</td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <form>
+                                                <button class="btn btn-outline-success" name="user_messages" style="margin-left: 89%" value="{{ user_contact }}">View All</button>
+                                            </form>
+                                        </div>
+                                        {% else %}
+                                           <h4>No Data Found.</h4>
+                                        {% endif %}
+                                    </div>
+                                </div>                            
+                                <!-- [ basic-table ] end -->
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
